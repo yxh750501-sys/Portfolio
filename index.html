@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>윤종민 | Full-stack Developer Portfolio</title>
+    <meta
+      name="description"
+      content="풀스택 개발자 윤종민의 포트폴리오 페이지입니다."
+    />
+    <script>
+      document.documentElement.classList.add("has-js");
+    </script>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body data-theme="light">
+    <div class="loader-screen" id="loader" aria-label="포트폴리오 로딩 중">
+      <div class="loader-content">
+        <div class="loader-code">
+          <span class="code-line">const portfolio = {</span>
+          <span class="code-line">  owner: "윤종민",</span>
+          <span class="code-line">  role: "full-stack",</span>
+          <span class="code-line">  status: "loading"</span>
+          <span class="code-line">};</span>
+        </div>
+        <div class="loader-track">
+          <div class="loader-bar"></div>
+        </div>
+        <strong id="loaderPercent">0%</strong>
+      </div>
+    </div>
+
+    <div class="scroll-progress" aria-hidden="true"></div>
+
+    <header class="main-header" id="header">
+      <nav class="nav-container" aria-label="주요 메뉴">
+        <a class="brand" href="#home" aria-label="윤종민 포트폴리오 홈">
+          <span class="brand-mark">YJM</span>
+          <span class="brand-text">portfolio</span>
+        </a>
+
+        <div class="nav-menu" id="navMenu">
+          <a class="nav-link active" href="#home" data-section="home">
+            <span class="nav-icon">#</span>
+            Home
+          </a>
+          <a class="nav-link" href="#about" data-section="about">
+            <span class="nav-icon">@</span>
+            About
+          </a>
+          <a class="nav-link" href="#journey" data-section="journey">
+            <span class="nav-icon">{}</span>
+            Journey
+          </a>
+          <a class="nav-link" href="#skills" data-section="skills">
+            <span class="nav-icon">[]</span>
+            Skills
+          </a>
+          <a class="nav-link" href="#project" data-section="project">
+            <span class="nav-icon">()</span>
+            Project
+          </a>
+          <a class="nav-link" href="#contact" data-section="contact">
+            <span class="nav-icon">;</span>
+            Contact
+          </a>
+        </div>
+
+        <div class="nav-actions">
+          <button class="icon-button" id="themeToggle" type="button" aria-label="테마 변경">
+            <span aria-hidden="true">◐</span>
+          </button>
+          <button class="menu-toggle" id="menuToggle" type="button" aria-label="메뉴 열기">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="slider-hero" data-section-root data-slider>
+        <div class="slider-header">
+          <button class="slider-menu" type="button" aria-label="메뉴 열기" data-open-menu>
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <span class="slider-label">JONGMIN YOON — FULL-STACK PORTFOLIO</span>
+        </div>
+
+        <div class="slider-body">
+          <div class="slider-left" data-reveal>
+            <p class="slider-kicker">from record to implementation</p>
+            <h1 class="slider-title" id="sliderTitle" aria-live="polite">TRACE</h1>
+
+            <div class="slider-copy">
+              <p id="sliderDescription">
+                기록하고 다시 보며 원인을 좁히는 방식으로 배워왔습니다.
+              </p>
+              <p id="sliderMeta">video review / feedback / debugging</p>
+            </div>
+
+            <div class="slider-actions">
+              <button class="slider-control" type="button" data-slider-prev aria-label="이전 슬라이드">Prev</button>
+              <button class="slider-control" type="button" data-slider-next aria-label="다음 슬라이드">Next</button>
+              <a class="button primary" href="#project">프로젝트 보기</a>
+            </div>
+
+            <div class="slider-index" aria-label="슬라이드 진행 상태">
+              <span id="sliderCurrent">01</span>
+              <span></span>
+              <strong id="sliderTotal">04</strong>
+            </div>
+          </div>
+
+          <div class="slider-right" data-reveal>
+            <div class="slider-images" id="sliderImages" aria-live="polite"></div>
+          </div>
+        </div>
+
+        <a class="scroll-indicator" href="#about" aria-label="다음 섹션으로 이동">
+          Scroll
+        </a>
+      </section>
+
+      <section id="about" class="section about-section" data-section-root>
+        <div class="section-container">
+          <div class="section-header" data-reveal>
+            <span class="section-number">01</span>
+            <h2 class="section-title">[About Me]</h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-copy" data-reveal>
+              <p>
+                소방안전관리학과를 전공한 뒤 관련 진로를 준비했지만, 오래 이어갈
+                일인지 다시 생각하게 되었습니다. 이후 10살 때부터 16년 동안
+                공백 없이 이어온 배드민턴을 일로 연결해 보고자 레슨을 진행했습니다.
+              </p>
+              <p>
+                그 과정에서 좋아하는 마음만으로 직업을 지속하기는 어렵고,
+                익숙한 환경 안에서 만든 기준이 밖에서도 그대로 통하지 않을 수
+                있다는 점을 배웠습니다. 개발을 배우며 아이디어가 화면, 서버,
+                데이터 흐름을 거쳐 실제 기능이 되는 과정에 흥미를 느꼈습니다.
+              </p>
+            </div>
+
+            <div class="code-card" data-reveal aria-label="윤종민을 코드로 표현한 카드">
+              <div class="code-window">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <pre><code>const jongmin = {
+  origin: "청양에서 대전으로",
+  habit: ["기록", "질문", "피드백"],
+  focus: ["screen", "server", "data"],
+  mindset: "기준은 계속 넓어진다"
+};</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="journey" class="section journey-section" data-section-root>
+        <div class="section-container">
+          <div class="section-header" data-reveal>
+            <span class="section-number">02</span>
+            <h2 class="section-title">[Journey]</h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="timeline">
+            <article class="timeline-item" data-reveal>
+              <span class="timeline-dot"></span>
+              <div class="timeline-content">
+                <p class="timeline-year">10살부터 현재</p>
+                <h3>기록하고 고치는 습관</h3>
+                <p>
+                  배드민턴 대회마다 경기를 촬영하고, 반복해서 흔들리는 장면을
+                  기억해 두었다가 더 나은 사람에게 확인받았습니다.
+                </p>
+                <div class="timeline-tags">
+                  <span>video review</span>
+                  <span>feedback</span>
+                  <span>practice</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="timeline-item" data-reveal>
+              <span class="timeline-dot"></span>
+              <div class="timeline-content">
+                <p class="timeline-year">대전으로 이동</p>
+                <h3>익숙한 기준 밖으로</h3>
+                <p>
+                  늘 같은 환경에 머무르기보다 새로운 사람과 기준을 만나야 더
+                  배울 수 있다고 판단했고, 혼자 대전으로 나와 생활했습니다.
+                </p>
+                <div class="timeline-tags">
+                  <span>new standard</span>
+                  <span>adapt</span>
+                  <span>growth</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="timeline-item" data-reveal>
+              <span class="timeline-dot"></span>
+              <div class="timeline-content">
+                <p class="timeline-year">개발 학습과 팀 프로젝트</p>
+                <h3>내 기능에서 전체 흐름으로</h3>
+                <p>
+                  처음에는 맡은 기능을 끝내는 데 집중했지만, PR 리뷰와 오류
+                  해결을 거치며 다른 팀원의 코드와 전체 흐름을 이해하는 일이
+                  중요하다는 것을 배웠습니다.
+                </p>
+                <div class="timeline-tags">
+                  <span>PR</span>
+                  <span>debugging</span>
+                  <span>team flow</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section skills-section" data-section-root>
+        <div class="section-container">
+          <div class="section-header" data-reveal>
+            <span class="section-number">03</span>
+            <h2 class="section-title">[Skills]</h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="skills-grid">
+            <article class="skill-card" data-reveal>
+              <h3>Frontend</h3>
+              <div class="skill-item" data-level="72">
+                <div class="skill-meta">
+                  <span>React</span>
+                  <strong>project</strong>
+                </div>
+                <div class="skill-bar"><span></span></div>
+              </div>
+              <div class="skill-item" data-level="64">
+                <div class="skill-meta">
+                  <span>TypeScript</span>
+                  <strong>learning</strong>
+                </div>
+                <div class="skill-bar"><span></span></div>
+              </div>
+              <div class="skill-item" data-level="58">
+                <div class="skill-meta">
+                  <span>TanStack Query</span>
+                  <strong>used</strong>
+                </div>
+                <div class="skill-bar"><span></span></div>
+              </div>
+            </article>
+
+            <article class="skill-card" data-reveal>
+              <h3>Backend</h3>
+              <div class="skill-item" data-level="66">
+                <div class="skill-meta">
+                  <span>Java / Spring Boot</span>
+                  <strong>project</strong>
+                </div>
+                <div class="skill-bar"><span></span></div>
+              </div>
+              <div class="skill-item" data-level="54">
+                <div class="skill-meta">
+                  <span>Spring Data JPA</span>
+                  <strong>learning</strong>
+                </div>
+                <div class="skill-bar"><span></span></div>
+              </div>
+              <div class="skill-item" data-level="52">
+                <div class="skill-meta">
+                  <span>Security / JWT</span>
+                  <strong>used</strong>
+                </div>
+                <div class="skill-bar"><span></span></div>
+              </div>
+            </article>
+
+            <article class="skill-card" data-reveal>
+              <h3>Database & Tools</h3>
+              <div class="skill-item" data-level="62">
+                <div class="skill-meta">
+                  <span>PostgreSQL / PostGIS</span>
+                  <strong>used</strong>
+                </div>
+                <div class="skill-bar"><span></span></div>
+              </div>
+              <div class="skill-item" data-level="70">
+                <div class="skill-meta">
+                  <span>Git / GitHub PR</span>
+                  <strong>team</strong>
+                </div>
+                <div class="skill-bar"><span></span></div>
+              </div>
+              <div class="skill-item" data-level="48">
+                <div class="skill-meta">
+                  <span>Docker</span>
+                  <strong>learning</strong>
+                </div>
+                <div class="skill-bar"><span></span></div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="project" class="section project-section" data-section-root>
+        <div class="section-container">
+          <div class="section-header" data-reveal>
+            <span class="section-number">04</span>
+            <h2 class="section-title">[Project]</h2>
+            <div class="section-line"></div>
+          </div>
+
+          <article class="project-card" data-reveal>
+            <div class="project-preview">
+              <div class="project-terminal">
+                <div class="terminal-head">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <p><strong>ORDA</strong> team project</p>
+                <p class="terminal-line">request → controller → service → repository</p>
+                <p class="terminal-line">screen state → api response → user flow</p>
+              </div>
+            </div>
+
+            <div class="project-content">
+              <p class="project-label">Team Project</p>
+              <h3>ORDA : 오르다</h3>
+              <p>
+                팀 프로젝트를 진행하며 GitHub PR, 코드 리뷰, 기능 간 연결 흐름을
+                경험했습니다. 프로젝트 중후반으로 갈수록 내가 맡은 기능뿐 아니라
+                다른 팀원의 코드와 전체 흐름을 이해하는 일이 문제 해결에 더
+                중요하다는 것을 배웠습니다.
+              </p>
+
+              <div class="flow-tabs" role="tablist" aria-label="프로젝트 흐름">
+                <button class="flow-tab active" type="button" data-flow="screen">Screen</button>
+                <button class="flow-tab" type="button" data-flow="api">API</button>
+                <button class="flow-tab" type="button" data-flow="data">Data</button>
+                <button class="flow-tab" type="button" data-flow="review">Review</button>
+              </div>
+
+              <div class="flow-panel" id="flowPanel">
+                <strong>Screen</strong>
+                <span>화면에서 발생한 요청이 어떤 값으로 전달되는지 먼저 확인했습니다.</span>
+              </div>
+
+              <div class="project-stack">
+                <span>React</span>
+                <span>TypeScript</span>
+                <span>Spring Boot</span>
+                <span>PostgreSQL</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact-section" data-section-root>
+        <div class="section-container">
+          <div class="section-header" data-reveal>
+            <span class="section-number">05</span>
+            <h2 class="section-title">[Contact]</h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="contact-grid">
+            <div class="contact-copy" data-reveal>
+              <h3>설명 가능한 개발자로 성장하고 싶습니다.</h3>
+              <p>
+                빠르게 결과를 얻는 도구도 중요하지만, 그 코드가 왜 그렇게
+                동작하는지 이해한 만큼 사용하는 개발자가 되겠습니다.
+              </p>
+            </div>
+
+            <div class="contact-actions" data-reveal>
+              <a href="mailto:yxh750501@gmail.com">
+                <span>Email</span>
+                <strong>yxh750501@gmail.com</strong>
+              </a>
+              <a href="tel:01051237429">
+                <span>Phone</span>
+                <strong>010-5123-7429</strong>
+              </a>
+              <button type="button" id="copyEmail">
+                <span>Copy</span>
+                <strong>이메일 복사</strong>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <p>© 2026 Jongmin Yoon Portfolio</p>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
