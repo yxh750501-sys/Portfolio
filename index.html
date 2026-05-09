@@ -33,6 +33,7 @@
             <li><a class="nav-link" href="#journey">Journey</a></li>
             <li><a class="nav-link" href="#skills">Skills</a></li>
             <li><a class="nav-link" href="#work">Work</a></li>
+            <li><a class="nav-link" href="#project">Project</a></li>
             <li><a class="nav-link" href="#contact">Contact</a></li>
           </ul>
         </div>
@@ -400,6 +401,7 @@
 
         <div class="work-filters reveal" aria-label="프로젝트 필터">
           <button class="work-item active-work" type="button" data-filter="all">All</button>
+          <button class="work-item" type="button" data-filter="personal">Personal</button>
           <button class="work-item" type="button" data-filter="team">Team</button>
           <button class="work-item" type="button" data-filter="backend">Backend</button>
           <button class="work-item" type="button" data-filter="frontend">Frontend</button>
@@ -407,33 +409,64 @@
         </div>
 
         <div class="work-container container grid">
-          <article class="work-card reveal" data-category="team backend frontend">
-            <div class="work-preview preview-orda">
-              <span>ORDA</span>
-              <small>screen - api - data</small>
+          <article class="work-card reveal" data-category="personal backend frontend">
+            <div class="work-preview preview-care">
+              <span>CareRoute</span>
+              <small>personal project brief</small>
             </div>
-            <h3 class="work-title">ORDA 팀 프로젝트</h3>
+            <h3 class="work-title">CareRoute 개인 프로젝트</h3>
             <p class="work-description">
-              풀스택 과정에서 진행한 팀 프로젝트입니다. 화면과 서버, 데이터 흐름을 함께 보며
-              기능을 연결하는 경험을 했습니다.
+              개인 프로젝트로 화면 흐름, API 연동, 데이터 처리 과정을 직접 설계하고
+              기능 단위로 검증했습니다.
             </p>
             <button class="work-button" type="button">
-              자세히 보기 <i class="uil uil-arrow-right work-button-icon"></i>
+              소개서 보기 <i class="uil uil-arrow-right work-button-icon"></i>
             </button>
 
             <div class="portfolio-item-details">
-              <h3 class="details-title">ORDA 팀 프로젝트</h3>
+              <h3 class="details-title">CareRoute 개인 프로젝트</h3>
               <p class="details-description">
-                맡은 기능만 보는 것에서 벗어나 PR 리뷰와 팀원 피드백을 통해 전체 흐름을
-                이해하는 경험을 했습니다. 오류를 만났을 때 각자 작성한 코드가 어떻게 연결되는지
-                확인하는 과정이 중요했습니다.
+                팀 프로젝트와 달리 요구 정리, 화면 구성, API 호출 흐름, 상태 관리 방식을
+                직접 결정하며 기능이 실제로 이어지는지 확인한 개인 프로젝트입니다.
               </p>
               <ul class="details-info">
-                <li>Role - <span>풀스택 개발 과정 팀 프로젝트 참여</span></li>
-                <li>Frontend - <span>React, TypeScript</span></li>
-                <li>Backend - <span>Java, Spring Boot</span></li>
-                <li>Database - <span>PostgreSQL, PostGIS</span></li>
+                <li>Project - <span>CareRoute 개인 프로젝트</span></li>
+                <li>Role - <span>기획 정리, 화면 구현, API 연동, 데이터 흐름 확인</span></li>
+                <li>Stack - <span>React, TypeScript, Spring Boot, PostgreSQL</span></li>
+                <li>Focus - <span>사용자 흐름, 서버 상태, 요청/응답 검증</span></li>
               </ul>
+              <a class="details-link" href="#care-route">CareRoute 소개서로 이동</a>
+            </div>
+          </article>
+
+          <article class="work-card reveal" data-category="team backend frontend">
+            <div class="work-preview preview-orda">
+              <span>ORDA</span>
+              <small>team project brief</small>
+            </div>
+            <h3 class="work-title">ORDA 프로젝트 소개서</h3>
+            <p class="work-description">
+              풀스택 교육 과정에서 진행한 팀 프로젝트입니다. 화면, API, 데이터 흐름을
+              연결하며 협업 방식과 백엔드 구조를 익혔습니다.
+            </p>
+            <button class="work-button" type="button">
+              소개서 보기 <i class="uil uil-arrow-right work-button-icon"></i>
+            </button>
+
+            <div class="portfolio-item-details">
+              <h3 class="details-title">ORDA 프로젝트 소개서</h3>
+              <p class="details-description">
+                위치 기반 데이터와 웹 화면을 연결하는 팀 프로젝트에 참여했습니다.
+                맡은 기능만 구현하는 데서 끝내지 않고, 화면에서 발생한 요청이 API와
+                데이터베이스를 거쳐 다시 화면 상태로 돌아오는 흐름을 이해하려고 했습니다.
+              </p>
+              <ul class="details-info">
+                <li>Project - <span>교육 과정 팀 프로젝트 ORDA</span></li>
+                <li>Role - <span>백엔드 중심 풀스택 개발 참여</span></li>
+                <li>Stack - <span>React, TypeScript, Java 17, Spring Boot, PostgreSQL, PostGIS</span></li>
+                <li>Focus - <span>API 처리 흐름, 데이터 조회, PR 리뷰 피드백 반영</span></li>
+              </ul>
+              <a class="details-link" href="#orda-brief">ORDA 소개서로 이동</a>
             </div>
           </article>
 
@@ -542,6 +575,243 @@
         </div>
       </div>
 
+      <section class="project-brief section" id="project">
+        <h2 class="section-title reveal" data-heading="Project Brief">Projects</h2>
+
+        <div class="project-brief-container container" id="care-route">
+          <div class="project-brief-block">
+            <div class="project-hero project-care reveal">
+              <div>
+                <span class="project-label">CareRoute Personal Project</span>
+                <h3>처음부터 끝까지 직접 흐름을 설계한 개인 프로젝트</h3>
+                <p>
+                  CareRoute는 개인 프로젝트로, 화면에서 시작되는 사용자 흐름과 API 요청,
+                  데이터 처리 과정을 직접 연결해 본 프로젝트입니다. 팀 프로젝트와 달리
+                  기획 정리부터 화면 구성, 서버 연동, 검증 과정까지 혼자 판단해야 했기 때문에
+                  기능을 작은 단위로 나누고 확인하는 방식에 집중했습니다.
+                </p>
+              </div>
+
+              <div class="project-stack-card care-stack" aria-label="CareRoute 기술 스택">
+                <span>React</span>
+                <span>TypeScript</span>
+                <span>Vite</span>
+                <span>Tailwind CSS</span>
+                <span>TanStack Query</span>
+                <span>Zustand</span>
+                <span>Axios</span>
+                <span>Spring Boot</span>
+                <span>PostgreSQL</span>
+              </div>
+            </div>
+
+            <div class="project-meta-grid reveal">
+              <article>
+                <strong>Type</strong>
+                <span>개인 프로젝트</span>
+              </article>
+              <article>
+                <strong>Role</strong>
+                <span>기획 정리부터 구현까지 직접 진행</span>
+              </article>
+              <article>
+                <strong>Focus</strong>
+                <span>화면 흐름, API 연동, 상태 관리</span>
+              </article>
+              <article>
+                <strong>Goal</strong>
+                <span>기능 흐름을 직접 설계하고 검증</span>
+              </article>
+            </div>
+
+            <div class="project-content-grid">
+              <article class="project-panel reveal">
+                <h3>직접 다룬 부분</h3>
+                <ul class="project-list">
+                  <li>
+                    <strong>사용자 흐름 정리</strong>
+                    <span>화면에서 어떤 입력이 발생하고 다음 단계로 어떻게 이어지는지 먼저 정리했습니다.</span>
+                  </li>
+                  <li>
+                    <strong>화면과 API 연결</strong>
+                    <span>사용자 동작에 따라 필요한 요청을 보내고, 응답 결과가 화면 상태에 반영되는지 확인했습니다.</span>
+                  </li>
+                  <li>
+                    <strong>상태와 오류 확인</strong>
+                    <span>정상 동작뿐 아니라 빈 값, 실패 응답, 로딩 상태처럼 사용자가 마주할 수 있는 상황을 함께 점검했습니다.</span>
+                  </li>
+                </ul>
+              </article>
+
+              <article class="project-panel reveal">
+                <h3>개인 프로젝트로 배운 점</h3>
+                <ul class="project-list">
+                  <li>
+                    <strong>결정의 이유 기록</strong>
+                    <span>혼자 진행할수록 왜 이 구조로 구현했는지 기록하지 않으면 이후 수정이 어려워진다는 점을 배웠습니다.</span>
+                  </li>
+                  <li>
+                    <strong>작은 단위 검증</strong>
+                    <span>큰 기능을 한 번에 완성하기보다 화면, 요청, 응답, 저장 흐름을 나누어 확인했습니다.</span>
+                  </li>
+                  <li>
+                    <strong>전체 흐름 이해</strong>
+                    <span>기능이 동작하는지만 보는 데서 끝나지 않고, 데이터가 어디서 만들어지고 어디에서 사용되는지 따라가려 했습니다.</span>
+                  </li>
+                </ul>
+              </article>
+            </div>
+
+            <div class="project-flow reveal" aria-label="CareRoute 진행 흐름">
+              <div>
+                <span>01</span>
+                <strong>흐름 정리</strong>
+                <p>사용자 동작과 필요한 화면 전환을 먼저 정리했습니다.</p>
+              </div>
+              <div>
+                <span>02</span>
+                <strong>화면 구현</strong>
+                <p>컴포넌트와 상태를 나누어 화면을 구성했습니다.</p>
+              </div>
+              <div>
+                <span>03</span>
+                <strong>API 연결</strong>
+                <p>요청과 응답이 화면 상태에 반영되는지 확인했습니다.</p>
+              </div>
+              <div>
+                <span>04</span>
+                <strong>검증 개선</strong>
+                <p>오류 상황과 사용 흐름을 다시 점검했습니다.</p>
+              </div>
+            </div>
+
+            <div class="project-takeaway reveal">
+              <h3>프로젝트를 통해 배운 점</h3>
+              <p>
+                개인 프로젝트는 정해진 답을 따라가는 작업보다 스스로 기준을 세우는 과정에 가까웠습니다.
+                화면을 먼저 만들더라도 API와 데이터 흐름을 함께 생각해야 수정이 쉬웠고,
+                작은 단위로 검증하며 기록하는 습관이 프로젝트를 끝까지 이어가는 데 중요했습니다.
+              </p>
+            </div>
+          </div>
+
+          <div class="project-brief-block" id="orda-brief">
+            <div class="project-hero project-orda reveal">
+            <div>
+              <span class="project-label">ORDA Team Project</span>
+              <h3>위치 기반 데이터와 API 흐름을 다룬 팀 프로젝트</h3>
+              <p>
+                ORDA는 풀스택 교육 과정에서 진행한 팀 프로젝트입니다. 저는 백엔드 흐름을
+                중심으로 참여하며, 화면에서 들어온 요청이 서버 로직과 데이터 조회를 거쳐
+                다시 사용자 화면에 반영되는 과정을 이해하고 구현하는 데 집중했습니다.
+              </p>
+            </div>
+
+            <div class="project-stack-card" aria-label="프로젝트 기술 스택">
+              <span>React</span>
+              <span>TypeScript</span>
+              <span>Java 17</span>
+              <span>Spring Boot</span>
+              <span>Spring Security</span>
+              <span>JWT</span>
+              <span>PostgreSQL</span>
+              <span>PostGIS</span>
+            </div>
+          </div>
+
+          <div class="project-meta-grid reveal">
+            <article>
+              <strong>Role</strong>
+              <span>백엔드 중심 풀스택 개발 참여</span>
+            </article>
+            <article>
+              <strong>Team</strong>
+              <span>교육 과정 팀 프로젝트</span>
+            </article>
+            <article>
+              <strong>Domain</strong>
+              <span>위치 기반 웹 서비스</span>
+            </article>
+            <article>
+              <strong>Focus</strong>
+              <span>API, 인증, 데이터 흐름 이해</span>
+            </article>
+          </div>
+
+          <div class="project-content-grid">
+            <article class="project-panel reveal">
+              <h3>담당하며 집중한 부분</h3>
+              <ul class="project-list">
+                <li>
+                  <strong>API 처리 흐름</strong>
+                  <span>controller, service, repository 구조를 기준으로 요청값과 응답 데이터를 확인했습니다.</span>
+                </li>
+                <li>
+                  <strong>인증과 요청 상태</strong>
+                  <span>Spring Security와 JWT가 화면 요청 흐름에 어떤 영향을 주는지 프로젝트에서 경험했습니다.</span>
+                </li>
+                <li>
+                  <strong>데이터 조회와 위치 정보</strong>
+                  <span>PostgreSQL과 PostGIS를 사용하며 위치 기반 데이터가 서비스 기능과 연결되는 과정을 접했습니다.</span>
+                </li>
+              </ul>
+            </article>
+
+            <article class="project-panel reveal">
+              <h3>문제 해결 방식</h3>
+              <ul class="project-list">
+                <li>
+                  <strong>요청부터 응답까지 추적</strong>
+                  <span>화면에서 문제가 보이면 API 요청, 서버 처리, DB 조회 순서로 원인을 좁혔습니다.</span>
+                </li>
+                <li>
+                  <strong>PR 리뷰 반영</strong>
+                  <span>팀원의 리뷰를 통해 자기 기능만 보는 습관에서 벗어나 전체 기능 연결을 확인했습니다.</span>
+                </li>
+                <li>
+                  <strong>설명 가능한 코드</strong>
+                  <span>AI나 검색으로 답을 얻더라도 코드가 왜 필요한지 다시 확인하고 기록하려고 했습니다.</span>
+                </li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="project-flow reveal" aria-label="프로젝트 진행 흐름">
+            <div>
+              <span>01</span>
+              <strong>요구 확인</strong>
+              <p>기능 목적과 화면 흐름을 먼저 정리했습니다.</p>
+            </div>
+            <div>
+              <span>02</span>
+              <strong>API 구현</strong>
+              <p>요청값, 처리 조건, 응답 형태를 맞췄습니다.</p>
+            </div>
+            <div>
+              <span>03</span>
+              <strong>화면 연결</strong>
+              <p>서버 응답이 사용자 화면에 반영되는지 확인했습니다.</p>
+            </div>
+            <div>
+              <span>04</span>
+              <strong>리뷰 개선</strong>
+              <p>PR 피드백을 반영하며 기준을 맞췄습니다.</p>
+            </div>
+          </div>
+
+          <div class="project-takeaway reveal">
+            <h3>프로젝트를 통해 배운 점</h3>
+            <p>
+              팀 프로젝트를 하며 기능 하나를 완성하는 것보다 중요한 것은 전체 흐름을 이해하는
+              일이라는 점을 배웠습니다. 화면, API, 데이터가 연결된 상태를 설명할 수 있어야
+              오류가 발생했을 때 원인을 빠르게 좁힐 수 있었고, PR 리뷰는 그 기준을 맞추는
+              과정이라는 것을 경험했습니다.
+            </p>
+          </div>
+          </div>
+        </div>
+      </section>
+
       <section class="contact section" id="contact">
         <h2 class="section-title reveal" data-heading="Get in Touch">Contact</h2>
 
@@ -603,6 +873,7 @@
               <li><a href="#about">About</a></li>
               <li><a href="#skills">Skills</a></li>
               <li><a href="#work">Work</a></li>
+              <li><a href="#project">Project</a></li>
             </ul>
 
             <div class="footer-socials">

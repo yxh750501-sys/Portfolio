@@ -72,8 +72,13 @@ const closePortfolioPopup = () => {
 
 document.addEventListener("click", (event) => {
   const button = event.target.closest(".work-button");
+  const popupLink = event.target.closest(".portfolio-popup a[href^='#']");
   if (button) {
     openPortfolioPopup(button.closest(".work-card"));
+  }
+
+  if (popupLink) {
+    closePortfolioPopup();
   }
 
   if (event.target === popup) {
