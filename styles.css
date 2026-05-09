@@ -1149,6 +1149,80 @@ ul {
   font-weight: 800;
 }
 
+.project-media-showcase {
+  display: grid;
+  gap: 1.25rem;
+  padding: 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: 0.9rem;
+  background:
+    linear-gradient(135deg, rgba(56, 189, 248, 0.08), transparent 52%),
+    var(--box);
+}
+
+.project-media-intro {
+  max-width: 780px;
+}
+
+.project-media-intro h3 {
+  margin-bottom: 0.7rem;
+  font-size: clamp(1.35rem, 2vw, 2rem);
+}
+
+.project-media-intro p {
+  color: var(--text);
+}
+
+.project-media-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.project-media-card {
+  display: grid;
+  overflow: hidden;
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+  background: var(--body-2);
+}
+
+.project-media-card a {
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  background: var(--body);
+}
+
+.project-media-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.project-media-card:hover img {
+  transform: scale(1.02);
+}
+
+.project-media-card figcaption {
+  display: grid;
+  gap: 0.4rem;
+  padding: 1rem;
+}
+
+.project-media-card strong {
+  color: var(--title);
+  font-size: 1rem;
+}
+
+.project-media-card span {
+  color: var(--text);
+  font-size: 0.92rem;
+}
+
 .project-content-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1441,7 +1515,8 @@ ul {
   }
 
   .project-hero,
-  .project-content-grid {
+  .project-content-grid,
+  .project-media-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1503,6 +1578,10 @@ ul {
   .project-meta-grid,
   .project-flow {
     grid-template-columns: 1fr;
+  }
+
+  .project-media-showcase {
+    padding: 1rem;
   }
 
   .project-flow div {
