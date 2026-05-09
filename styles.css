@@ -854,7 +854,7 @@ ul {
     linear-gradient(45deg, #111827, #243044);
 }
 
-.preview-care {
+.preview-littlesteps {
   background:
     linear-gradient(135deg, rgba(34, 211, 238, 0.42), transparent 58%),
     linear-gradient(45deg, #0f172a, #12313f);
@@ -1100,7 +1100,7 @@ ul {
     var(--body-2);
 }
 
-.project-stack-card.care-stack {
+.project-stack-card.littlesteps-stack {
   background:
     linear-gradient(135deg, rgba(34, 211, 238, 0.18), transparent 64%),
     var(--body-2);
