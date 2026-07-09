@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
@@ -7,1080 +7,381 @@
     <title>윤종민 | Full-stack Developer Portfolio</title>
     <meta
       name="description"
-      content="풀스택 개발자 취업을 준비하는 윤종민의 포트폴리오입니다."
+      content="화면과 서버, 데이터 흐름을 함께 이해하며 성장하는 윤종민의 개발자 포트폴리오입니다."
     />
-    <link
-      rel="stylesheet"
-      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
-    />
-    <link rel="stylesheet" href="./styles.css?v=light-clean-final" />
+    <link rel="stylesheet" href="./styles.css?v=profile-clean-1" />
   </head>
   <body>
-    <button class="nav-toggle" id="navToggle" type="button" aria-label="메뉴 열기">
-      <i class="uil uil-bars"></i>
-    </button>
-
-    <aside class="sidebar" id="sidebar">
-      <nav class="nav" aria-label="포트폴리오 메뉴">
-        <a class="nav-logo" href="#home" aria-label="윤종민 포트폴리오 홈">
-          <span>Y</span>
-        </a>
-
-        <div class="nav-menu">
-          <ul class="nav-list">
-            <li><a class="nav-link active-link" href="#home">Home</a></li>
-            <li><a class="nav-link" href="#about">About</a></li>
-            <li><a class="nav-link" href="#journey">Journey</a></li>
-            <li><a class="nav-link" href="#skills">Skills</a></li>
-            <li><a class="nav-link" href="#work">Work</a></li>
-            <li><a class="nav-link" href="#project">Project</a></li>
-            <li><a class="nav-link" href="#contact">Contact</a></li>
-          </ul>
-        </div>
-
-        <a class="nav-share" href="mailto:yxh750501@gmail.com" aria-label="이메일 보내기">
-          <i class="uil uil-envelope"></i>
-        </a>
-
-        <button class="nav-close" id="navClose" type="button" aria-label="메뉴 닫기">
-          <i class="uil uil-times"></i>
-        </button>
+    <header class="site-header">
+      <a class="site-logo" href="#top" aria-label="윤종민 포트폴리오 홈">YJM</a>
+      <nav class="site-nav" aria-label="포트폴리오 메뉴">
+        <a href="#about">소개</a>
+        <a href="#skills">기술</a>
+        <a href="#projects">프로젝트</a>
+        <a href="#growth">경험</a>
+        <a href="#contact">연락</a>
       </nav>
-    </aside>
+    </header>
 
-    <main class="main">
-      <section class="home section-screen" id="home">
-        <div class="home-container container grid">
-          <div class="home-social">
-            <span class="home-social-follow">Connect</span>
-            <div class="home-social-links">
-              <a
-                href="https://github.com/yxh750501-sys"
-                target="_blank"
-                rel="noreferrer"
-                class="home-social-link"
-                aria-label="GitHub"
-              >
-                <i class="uil uil-github"></i>
-              </a>
-              <a
-                href="mailto:yxh750501@gmail.com"
-                class="home-social-link"
-                aria-label="Email"
-              >
-                <i class="uil uil-envelope"></i>
-              </a>
-              <a href="#work" class="home-social-link" aria-label="Work">
-                <i class="uil uil-brackets-curly"></i>
-              </a>
-            </div>
+    <main class="page-shell" id="top">
+      <aside class="profile-panel">
+        <div class="profile-card">
+          <img class="profile-photo" src="./assets/profile.jpg" alt="윤종민 프로필 사진" />
+          <div class="profile-summary">
+            <span class="profile-status">구직 중</span>
+            <h1>윤종민</h1>
+            <p>Full-stack Developer</p>
           </div>
 
-          <div class="home-data reveal">
-            <span class="eyebrow">Full-stack Developer Portfolio</span>
-            <h1 class="home-title">윤종민</h1>
-            <h2 class="home-subtitle">기록하고 확인하며 기능을 완성하는 개발자</h2>
-            <p class="home-description">
-              화면에서 시작된 요청이 서버와 데이터 흐름을 거쳐 다시 사용자에게 돌아오는
-              과정을 이해하려고 합니다. 빠르게 결과만 얻기보다, 왜 그렇게 동작하는지
-              설명할 수 있는 상태를 목표로 개발을 배우고 있습니다.
-            </p>
+          <p class="profile-intro">
+            빠르게 결과만 만들기보다, 기능이 왜 그렇게 동작하는지 설명할 수 있는 상태를
+            목표로 개발을 배우고 있습니다.
+          </p>
 
-            <div class="home-buttons">
-              <a href="#work" class="button">
-                <i class="uil uil-folder-open button-icon"></i>
-                프로젝트 보기
-              </a>
-              <a href="#about" class="button button-ghost">
-                <i class="uil uil-user button-icon"></i>
-                소개 보기
-              </a>
-            </div>
+          <div class="profile-actions">
+            <a class="button primary" href="#projects">프로젝트 보기</a>
+            <button class="button ghost" id="copyEmail" type="button">이메일 복사</button>
           </div>
+        </div>
 
-          <div class="home-visual reveal">
-            <div class="portrait-card">
-              <img src="./assets/profile.jpg" alt="윤종민 프로필 사진" />
-              <div class="portrait-code">
-                <strong>record.review()</strong>
-                <span>feedback -&gt; adjust -&gt; build</span>
-              </div>
-            </div>
+        <section class="side-card">
+          <h2>Contact</h2>
+          <ul class="info-list">
+            <li>
+              <span>Email</span>
+              <a href="mailto:yxh750501@gmail.com">yxh750501@gmail.com</a>
+            </li>
+            <li>
+              <span>GitHub</span>
+              <a href="https://github.com/yxh750501-sys" target="_blank" rel="noreferrer">
+                github.com/yxh750501-sys
+              </a>
+            </li>
+            <li>
+              <span>Location</span>
+              <strong>대전</strong>
+            </li>
+          </ul>
+        </section>
 
-            <div class="floating-terminal" aria-hidden="true">
-              <span>const flow = ["screen", "api", "data"];</span>
-              <span>if (!understood) ask();</span>
-              <span>return explain(result);</span>
-            </div>
+        <section class="side-card">
+          <h2>Keywords</h2>
+          <div class="keyword-list">
+            <span>기록하는 습관</span>
+            <span>팀 흐름 이해</span>
+            <span>API/DB 흐름</span>
+            <span>피드백 반영</span>
           </div>
+        </section>
+      </aside>
 
-          <div class="my-info">
-            <article class="info-item reveal">
-              <i class="uil uil-analysis info-icon"></i>
-              <div>
-                <h3 class="info-title">Review Habit</h3>
-                <span class="info-subtitle">기록하고 다시 확인하는 방식</span>
+      <div class="content-column">
+        <section class="hero-card section-card reveal" id="about">
+          <span class="section-kicker">Backend-oriented Full-stack</span>
+          <h2>화면 너머의 흐름을 이해하려는 개발자</h2>
+          <p>
+            국비지원 풀스택 개발 과정을 통해 Java, Spring Boot, React, TypeScript,
+            데이터베이스 연동, 테스트와 배포까지 웹 서비스 개발의 기본 흐름을 경험했습니다.
+            처음에는 화면에서 기능이 정상적으로 동작하는지에 집중했지만, 프로젝트를 진행하며
+            사용자의 요청이 API와 서버 로직, 데이터베이스를 거쳐 다시 화면으로 돌아오는 과정을
+            이해하는 데 관심이 생겼습니다.
+          </p>
+        </section>
+
+        <section class="section-card reveal">
+          <div class="section-heading">
+            <span>01</span>
+            <h2>Profile</h2>
+          </div>
+          <div class="profile-grid">
+            <article>
+              <strong>배우는 방식</strong>
+              <p>
+                모르는 부분을 오래 붙잡기보다 확인한 내용과 막힌 지점을 정리해 질문하고,
+                받은 피드백을 다시 적용하는 방식으로 속도를 올리려 합니다.
+              </p>
+            </article>
+            <article>
+              <strong>협업 태도</strong>
+              <p>
+                팀 프로젝트에서 Git 브랜치를 기능별로 나누고, 커밋 메시지에 수정 내용을
+                구분해 남기며 작업 흐름을 맞추는 경험을 했습니다.
+              </p>
+            </article>
+            <article>
+              <strong>관심 방향</strong>
+              <p>
+                화면, API, DB가 따로 움직이는 것이 아니라 하나의 흐름으로 연결되는 구조를
+                안정적으로 구현하는 개발자가 되고 싶습니다.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section-card reveal" id="skills">
+          <div class="section-heading">
+            <span>02</span>
+            <h2>Skills</h2>
+          </div>
+          <div class="skill-board">
+            <article>
+              <h3>Backend</h3>
+              <p>Java, Spring Boot, JPA 기반의 API 처리 흐름을 학습했습니다.</p>
+              <div class="tag-list">
+                <span>Java</span>
+                <span>Spring Boot</span>
+                <span>JPA</span>
+                <span>Spring Security</span>
+                <span>JWT</span>
               </div>
             </article>
-
-            <article class="info-item reveal">
-              <i class="uil uil-code-branch info-icon"></i>
-              <div>
-                <h3 class="info-title">Team Flow</h3>
-                <span class="info-subtitle">PR 피드백과 기능 연결 경험</span>
+            <article>
+              <h3>Database</h3>
+              <p>요청 데이터가 저장되고 다시 조회되는 흐름을 프로젝트에서 다뤘습니다.</p>
+              <div class="tag-list">
+                <span>PostgreSQL</span>
+                <span>PostGIS</span>
+                <span>SQL</span>
+                <span>DB 연동</span>
               </div>
             </article>
-
-            <article class="info-item reveal">
-              <i class="uil uil-layer-group info-icon"></i>
-              <div>
-                <h3 class="info-title">Full-stack</h3>
-                <span class="info-subtitle">화면, 서버, 데이터 흐름 학습</span>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="about section" id="about">
-        <h2 class="section-title reveal" data-heading="My Intro">About Me</h2>
-
-        <div class="about-container container grid">
-          <div class="about-image-wrap reveal">
-            <img src="./assets/profile.jpg" alt="윤종민 사진" class="about-img" />
-          </div>
-
-          <div class="about-data reveal">
-            <h3 class="about-heading">익숙한 기준 밖으로 나가며 배운 사람</h3>
-            <p class="about-description">
-              소방안전관리학과를 전공했지만, 졸업 후 전공 진로를 계속 이어갈 수
-              있을지 다시 생각했습니다. 이후 청양을 떠나 대전에서 혼자 생활하며
-              새로운 환경을 선택했고, 그 과정에서 익숙한 기준만으로는 성장하기
-              어렵다는 점을 배웠습니다.
-            </p>
-            <p class="about-description">
-              배드민턴은 10살 때부터 16년 동안 이어온 취미입니다. 대회 영상을
-              촬영하고, 부족한 장면을 기억해 두었다가 더 잘하는 사람에게 확인받는
-              방식으로 실력을 올렸습니다. 개발을 배우면서도 이 습관은 이어졌습니다.
-              오류를 과정으로 보고, 현재 상태를 확인한 뒤 원인을 좁혀가는 방식이
-              저와 잘 맞았습니다.
-            </p>
-
-            <div class="about-info">
-              <div class="about-box">
-                <i class="uil uil-trophy about-icon"></i>
-                <h3 class="about-title">Badminton</h3>
-                <span class="about-subtitle">10살부터 16년</span>
-              </div>
-
-              <div class="about-box">
-                <i class="uil uil-video about-icon"></i>
-                <h3 class="about-title">Feedback</h3>
-                <span class="about-subtitle">영상 리뷰 기반 개선</span>
-              </div>
-
-              <div class="about-box">
-                <i class="uil uil-layers about-icon"></i>
-                <h3 class="about-title">Development</h3>
-                <span class="about-subtitle">풀스택 과정 학습</span>
-              </div>
-            </div>
-
-            <a href="#contact" class="button">
-              <i class="uil uil-message button-icon"></i>
-              연락 정보 보기
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section class="journey section" id="journey">
-        <h2 class="section-title reveal" data-heading="My Journey">Journey</h2>
-
-        <div class="journey-container container grid">
-          <div class="journey-column reveal">
-            <h3 class="journey-title">
-              <i class="uil uil-map-marker"></i>
-              기준이 바뀐 경험
-            </h3>
-
-            <div class="timeline">
-              <article class="timeline-item">
-                <div class="circle-dot"></div>
-                <h3 class="timeline-title">청양에서 대전으로</h3>
-                <p class="timeline-text">
-                  처음으로 익숙한 지역을 떠나 혼자 생활했습니다. 새로운 사람과
-                  환경을 만나며 기존 기준이 전부가 아니라는 점을 체감했습니다.
-                </p>
-                <span class="timeline-date">
-                  <i class="uil uil-calendar-alt"></i>
-                  졸업 이후
-                </span>
-              </article>
-
-              <article class="timeline-item">
-                <div class="circle-dot"></div>
-                <h3 class="timeline-title">배드민턴 레슨과 현실 확인</h3>
-                <p class="timeline-text">
-                  좋아하는 일로 돈을 버는 경험을 했지만, 선수 이력과 대회 성적,
-                  전문성의 차이를 보며 좋아하는 마음만으로는 부족하다는 점을
-                  알았습니다.
-                </p>
-                <span class="timeline-date">
-                  <i class="uil uil-calendar-alt"></i>
-                  대전 생활 초반
-                </span>
-              </article>
-
-              <article class="timeline-item">
-                <div class="circle-dot"></div>
-                <h3 class="timeline-title">촬영, 피드백, 적용</h3>
-                <p class="timeline-text">
-                  경기 영상을 남기고 더 나은 사람에게 확인받았습니다. 바로 결과가
-                  나지 않아도 몸에 익을 때까지 적용하며 실력을 끌어올렸습니다.
-                </p>
-                <span class="timeline-date">
-                  <i class="uil uil-calendar-alt"></i>
-                  현재도 진행 중
-                </span>
-              </article>
-            </div>
-          </div>
-
-          <div class="journey-column reveal">
-            <h3 class="journey-title">
-              <i class="uil uil-brackets-curly"></i>
-              개발을 배우며 바뀐 태도
-            </h3>
-
-            <div class="timeline">
-              <article class="timeline-item">
-                <div class="circle-dot"></div>
-                <h3 class="timeline-title">동작 여부가 바로 드러나는 분야</h3>
-                <p class="timeline-text">
-                  개발에서는 코드가 의도대로 동작하는지 바로 확인할 수 있었습니다.
-                  한 가지 결과를 만들기 위한 방법이 여러 갈래라는 점에 흥미를
-                  느꼈습니다.
-                </p>
-                <span class="timeline-date">
-                  <i class="uil uil-calendar-alt"></i>
-                  개발 학습 시작
-                </span>
-              </article>
-
-              <article class="timeline-item">
-                <div class="circle-dot"></div>
-                <h3 class="timeline-title">모르는 것을 묻는 방식</h3>
-                <p class="timeline-text">
-                  팀 프로젝트 초반에는 이해하지 못한 부분을 바로 확인하지 않아
-                  다시 작업한 경험이 있습니다. 이후 질문은 부족함이 아니라 기준을
-                  맞추는 과정이라고 받아들이게 되었습니다.
-                </p>
-                <span class="timeline-date">
-                  <i class="uil uil-calendar-alt"></i>
-                  팀 프로젝트
-                </span>
-              </article>
-
-              <article class="timeline-item">
-                <div class="circle-dot"></div>
-                <h3 class="timeline-title">PR 리뷰를 보며 배운 흐름</h3>
-                <p class="timeline-text">
-                  팀원이 다른 사람의 PR까지 꼼꼼히 읽고 피드백하는 모습을 보며,
-                  자기 기능만 보는 개발과 전체 흐름을 보는 개발의 차이를 배웠습니다.
-                </p>
-                <span class="timeline-date">
-                  <i class="uil uil-calendar-alt"></i>
-                  프로젝트 중후반
-                </span>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="skills section" id="skills">
-        <h2 class="section-title reveal" data-heading="My Abilities">Skills</h2>
-
-        <div class="skills-container container grid">
-          <div class="skills-tabs reveal">
-            <button class="skills-header skills-active" type="button" data-target="#frontend">
-              <i class="uil uil-window skills-icon"></i>
-              <span>
-                <strong class="skills-title">Frontend</strong>
-                <small class="skills-subtitle">화면 상태와 사용자 흐름</small>
-              </span>
-              <i class="uil uil-angle-down skills-arrow"></i>
-            </button>
-
-            <button class="skills-header" type="button" data-target="#backend">
-              <i class="uil uil-server-network skills-icon"></i>
-              <span>
-                <strong class="skills-title">Backend</strong>
-                <small class="skills-subtitle">API와 서버 처리 흐름</small>
-              </span>
-              <i class="uil uil-angle-down skills-arrow"></i>
-            </button>
-
-            <button class="skills-header" type="button" data-target="#tools">
-              <i class="uil uil-wrench skills-icon"></i>
-              <span>
-                <strong class="skills-title">Tools</strong>
-                <small class="skills-subtitle">협업과 검증 도구</small>
-              </span>
-              <i class="uil uil-angle-down skills-arrow"></i>
-            </button>
-          </div>
-
-          <div class="skills-content reveal">
-            <div class="skills-group skills-active" data-content id="frontend">
-              <article class="skill-block">
-                <h3>React / TypeScript</h3>
-                <p>컴포넌트 단위로 화면을 구성하고, API 응답에 따른 상태 변화를 다뤄봤습니다.</p>
-                <span>프로젝트 사용</span>
-              </article>
-
-              <article class="skill-block">
-                <h3>HTML / CSS / JavaScript</h3>
-                <p>정적 페이지 구성, 반응형 레이아웃, DOM 이벤트 처리 경험이 있습니다.</p>
-                <span>기초 구현 가능</span>
-              </article>
-
-              <article class="skill-block">
-                <h3>TanStack Query</h3>
-                <p>서버 상태를 화면과 연결하는 과정에서 쿼리와 캐시 흐름을 학습했습니다.</p>
-                <span>학습 및 사용</span>
-              </article>
-            </div>
-
-            <div class="skills-group" data-content id="backend">
-              <article class="skill-block">
-                <h3>Java / Spring Boot</h3>
-                <p>controller, service, repository 흐름으로 기능을 나누어 구현하는 구조를 학습했습니다.</p>
-                <span>프로젝트 사용</span>
-              </article>
-
-              <article class="skill-block">
-                <h3>Spring Data JPA</h3>
-                <p>엔티티와 repository를 통해 데이터를 조회하고 저장하는 흐름을 다뤄봤습니다.</p>
-                <span>학습 중</span>
-              </article>
-
-              <article class="skill-block">
-                <h3>Security / JWT</h3>
-                <p>인증 흐름이 화면과 API 요청에 어떤 영향을 주는지 프로젝트에서 경험했습니다.</p>
-                <span>프로젝트 경험</span>
-              </article>
-            </div>
-
-            <div class="skills-group" data-content id="tools">
-              <article class="skill-block">
-                <h3>Git / GitHub PR</h3>
-                <p>브랜치 작업, PR 등록, 리뷰 피드백 반영 과정을 팀 프로젝트에서 경험했습니다.</p>
-                <span>협업 경험</span>
-              </article>
-
-              <article class="skill-block">
-                <h3>PostgreSQL / PostGIS</h3>
-                <p>프로젝트에서 데이터 저장과 위치 기반 데이터 흐름을 접했습니다.</p>
-                <span>프로젝트 사용</span>
-              </article>
-
-              <article class="skill-block">
-                <h3>AI Tooling</h3>
-                <p>빠른 답을 얻는 도구로만 쓰기보다, 생성된 코드의 이유를 확인하며 사용하려고 합니다.</p>
-                <span>보조 도구</span>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="work section" id="work">
-        <h2 class="section-title reveal" data-heading="My Portfolio">Work</h2>
-
-        <div class="work-filters reveal" aria-label="프로젝트 필터">
-          <button class="work-item active-work" type="button" data-filter="all">All</button>
-          <button class="work-item" type="button" data-filter="personal">Personal</button>
-          <button class="work-item" type="button" data-filter="team">Team</button>
-          <button class="work-item" type="button" data-filter="backend">Backend</button>
-          <button class="work-item" type="button" data-filter="frontend">Frontend</button>
-          <button class="work-item" type="button" data-filter="review">Review</button>
-        </div>
-
-        <div class="work-container container grid">
-          <article class="work-card reveal" data-category="personal backend frontend">
-            <div class="work-preview preview-littlesteps">
-              <span>LittleSteps</span>
-              <small>personal project brief</small>
-            </div>
-            <h3 class="work-title">LittleSteps 서비스 소개서</h3>
-            <p class="work-description">
-              경계선 지능장애 또는 ADHD 전조 증상이 걱정되는 아이의 보호자가 체크리스트,
-              결과 확인, 센터 탐색, 커뮤니티를 이용할 수 있는 서비스입니다.
-            </p>
-            <button class="work-button" type="button">
-              소개서 보기 <i class="uil uil-arrow-right work-button-icon"></i>
-            </button>
-
-            <div class="portfolio-item-details">
-              <h3 class="details-title">LittleSteps 서비스 소개서</h3>
-              <p class="details-description">
-                LittleSteps는 아이의 발달 신호가 걱정되는 보호자를 위해 아이 프로필 등록,
-                AAC 기초 체크리스트, 결과 확인, 관련 센터 탐색, 보호자 커뮤니티를 한 흐름으로
-                연결한 개인 프로젝트입니다.
-              </p>
-              <ul class="details-info">
-                <li>Project - <span>LittleSteps 개인 프로젝트</span></li>
-                <li>Role - <span>기획 정리, 화면 구현, API 연동, 데이터 흐름 확인</span></li>
-                <li>Stack - <span>React, TypeScript, Spring Boot, PostgreSQL</span></li>
-                <li>Focus - <span>사용자 흐름, 서버 상태, 요청/응답 검증</span></li>
-              </ul>
-              <a class="details-link" href="#little-steps">LittleSteps 소개서로 이동</a>
-            </div>
-          </article>
-
-          <article class="work-card reveal" data-category="team backend frontend">
-            <div class="work-preview preview-orda">
-              <span>ORDA</span>
-              <small>team project brief</small>
-            </div>
-            <h3 class="work-title">ORDA 등산 서비스 소개서</h3>
-            <p class="work-description">
-              등산자가 실시간 GPS로 산행을 기록하고, 정상 인증과 세션 상세,
-              2D 리플레이로 산행 기록을 다시 확인할 수 있는 등산 서비스입니다.
-            </p>
-            <button class="work-button" type="button">
-              소개서 보기 <i class="uil uil-arrow-right work-button-icon"></i>
-            </button>
-
-            <div class="portfolio-item-details">
-              <h3 class="details-title">ORDA 등산 서비스 소개서</h3>
-              <p class="details-description">
-                ORDA는 등산자가 산행을 시작하고 GPS 트랙을 기록한 뒤, 정상 인증,
-                난이도 지도, 세션 상세, 2D 리플레이를 통해 산행 기록을 확인할 수 있도록
-                구성한 위치 기반 등산 서비스입니다.
-              </p>
-              <ul class="details-info">
-                <li>Project - <span>교육 과정 팀 프로젝트 ORDA</span></li>
-                <li>Role - <span>백엔드 중심 풀스택 개발 참여</span></li>
-                <li>Stack - <span>React, TypeScript, Java 17, Spring Boot, PostgreSQL, PostGIS</span></li>
-                <li>Focus - <span>API 처리 흐름, 데이터 조회, PR 리뷰 피드백 반영</span></li>
-              </ul>
-              <a class="details-link" href="#orda-brief">ORDA 소개서로 이동</a>
-            </div>
-          </article>
-
-          <article class="work-card reveal" data-category="backend">
-            <div class="work-preview preview-api">
-              <span>API</span>
-              <small>controller - service - repository</small>
-            </div>
-            <h3 class="work-title">API 처리 흐름 학습</h3>
-            <p class="work-description">
-              요청이 controller, service, repository를 거쳐 응답으로 돌아오는 구조를 기준으로
-              기능을 이해하려고 했습니다.
-            </p>
-            <button class="work-button" type="button">
-              자세히 보기 <i class="uil uil-arrow-right work-button-icon"></i>
-            </button>
-
-            <div class="portfolio-item-details">
-              <h3 class="details-title">API 처리 흐름 학습</h3>
-              <p class="details-description">
-                API 설계와 DB 연동은 아직 더 채워야 할 부분이지만, 프로젝트 과정에서 요청값과
-                처리 흐름을 따라가며 문제가 생긴 위치를 좁히는 경험을 쌓았습니다.
-              </p>
-              <ul class="details-info">
-                <li>Focus - <span>요청값, 처리 조건, 응답 데이터 확인</span></li>
-                <li>Stack - <span>Spring Boot, JPA</span></li>
-                <li>Learning - <span>기능을 설명할 수 있는 상태 만들기</span></li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="work-card reveal" data-category="frontend">
-            <div class="work-preview preview-screen">
-              <span>UI</span>
-              <small>state - request - response</small>
-            </div>
-            <h3 class="work-title">화면과 서버 상태 연결</h3>
-            <p class="work-description">
-              사용자의 입력과 API 응답이 화면 상태에 어떻게 반영되는지 확인하며 프론트 작업을
-              진행했습니다.
-            </p>
-            <button class="work-button" type="button">
-              자세히 보기 <i class="uil uil-arrow-right work-button-icon"></i>
-            </button>
-
-            <div class="portfolio-item-details">
-              <h3 class="details-title">화면과 서버 상태 연결</h3>
-              <p class="details-description">
-                화면에서 보이는 동작을 단순한 UI로만 보지 않고, 어떤 요청이 발생하고 어떤 응답이
-                돌아오는지 확인하는 방식으로 작업하려고 했습니다.
-              </p>
-              <ul class="details-info">
-                <li>Focus - <span>화면 상태, API 응답, 사용자 흐름</span></li>
-                <li>Stack - <span>React, TypeScript</span></li>
-                <li>Learning - <span>동작 결과와 데이터 흐름 함께 보기</span></li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="work-card reveal" data-category="team review">
-            <div class="work-preview preview-review">
-              <span>PR</span>
-              <small>read - question - reflect</small>
-            </div>
-            <h3 class="work-title">PR 리뷰에서 배운 기준</h3>
-            <p class="work-description">
-              팀원이 다른 기능의 PR까지 읽고 피드백하는 모습을 보며, 전체 흐름을 파악하는
-              태도의 필요성을 배웠습니다.
-            </p>
-            <button class="work-button" type="button">
-              자세히 보기 <i class="uil uil-arrow-right work-button-icon"></i>
-            </button>
-
-            <div class="portfolio-item-details">
-              <h3 class="details-title">PR 리뷰에서 배운 기준</h3>
-              <p class="details-description">
-                AI로 빠르게 오류를 찾으려 해도 근본 원인이 잘 보이지 않는 경우가 있었습니다.
-                이때 팀 전체의 기능 흐름을 이해하고 있던 팀원의 피드백이 문제 해결에 큰 도움이
-                되었습니다.
-              </p>
-              <ul class="details-info">
-                <li>Before - <span>자기 작업 위주로 기능 이해</span></li>
-                <li>After - <span>다른 기능과 연결되는 지점 확인</span></li>
-                <li>Takeaway - <span>코드를 읽는 시간이 문제 해결 시간을 줄인다</span></li>
-              </ul>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <div class="portfolio-popup" id="portfolioPopup" aria-hidden="true">
-        <div class="portfolio-popup-inner">
-          <div class="portfolio-popup-content grid">
-            <button class="portfolio-popup-close" type="button" aria-label="팝업 닫기">
-              <i class="uil uil-times"></i>
-            </button>
-            <div class="pp-thumbnail">
-              <div class="portfolio-popup-preview" id="popupPreview">ORDA</div>
-            </div>
-
-            <div class="portfolio-popup-info">
-              <div class="portfolio-popup-subtitle">Selected Work</div>
-              <div class="portfolio-popup-body" id="popupBody"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <section class="project-brief section" id="project">
-        <h2 class="section-title reveal" data-heading="Project Brief">Projects</h2>
-
-        <div class="project-brief-container container">
-          <div class="project-brief-block" id="little-steps">
-            <div class="project-hero project-care reveal">
-              <div>
-                <span class="project-label">LittleSteps Personal Project</span>
-                <h3>발달 신호가 걱정되는 아이의 보호자를 위한 체크리스트 서비스</h3>
-                <p>
-                  LittleSteps는 경계선 지능장애 또는 ADHD 전조 증상이 걱정되는 아이의 보호자를
-                  위한 서비스입니다. 보호자가 아이 프로필을 등록하고 AAC 기초 체크리스트를
-                  진행한 뒤 결과를 확인하며, 필요한 경우 관련 센터 탐색과 보호자 커뮤니티로
-                  이어질 수 있도록 구성했습니다.
-                </p>
-              </div>
-
-              <div class="project-stack-card littlesteps-stack" aria-label="LittleSteps 기술 스택">
+            <article>
+              <h3>Frontend</h3>
+              <p>사용자 입력과 API 응답이 화면 상태로 이어지는 과정을 구현했습니다.</p>
+              <div class="tag-list">
                 <span>React</span>
                 <span>TypeScript</span>
-                <span>Vite</span>
-                <span>Tailwind CSS</span>
-                <span>TanStack Query</span>
-                <span>Zustand</span>
-                <span>Axios</span>
-                <span>Spring Boot</span>
-                <span>PostgreSQL</span>
+                <span>HTML</span>
+                <span>CSS</span>
               </div>
-            </div>
-
-            <div class="project-media-showcase reveal" aria-label="LittleSteps 실제 구현 화면">
-              <div class="project-media-intro">
-                <span class="project-label">Visual Evidence</span>
-                <h3>실제 화면으로 보는 LittleSteps 기능 흐름</h3>
-                <p>
-                  아래 화면은 보호자가 서비스를 이용하는 순서에 맞춰 배치했습니다.
-                  메인 화면에서 아이 정보를 등록하고, 체크리스트를 진행해 결과를 확인한 뒤
-                  센터 찾기와 커뮤니티로 이어지는 흐름을 보여줍니다.
-                </p>
+            </article>
+            <article>
+              <h3>Collaboration</h3>
+              <p>기능별 브랜치, 커밋 메시지, PR 리뷰를 통해 협업 흐름을 경험했습니다.</p>
+              <div class="tag-list">
+                <span>Git</span>
+                <span>GitHub</span>
+                <span>Notion</span>
+                <span>Slack</span>
               </div>
+            </article>
+          </div>
+        </section>
 
-              <div class="project-media-grid">
-                <figure class="project-media-card">
-                  <a href="./assets/littlesteps/littlesteps-main.png" target="_blank" rel="noreferrer">
-                    <img
-                      src="./assets/littlesteps/littlesteps-main.png"
-                      alt="LittleSteps 메인페이지 화면"
-                      loading="lazy"
-                    />
-                  </a>
-                  <figcaption>
-                    <strong>01. 서비스 진입</strong>
-                    <span>메인 화면에서 체크리스트, 센터 탐색, 커뮤니티 기능으로 이동하는 시작 지점입니다.</span>
-                  </figcaption>
-                </figure>
-
-                <figure class="project-media-card">
-                  <a href="./assets/littlesteps/littlesteps-child-profile.png" target="_blank" rel="noreferrer">
-                    <img
-                      src="./assets/littlesteps/littlesteps-child-profile.png"
-                      alt="LittleSteps 아이 프로필 등록 화면"
-                      loading="lazy"
-                    />
-                  </a>
-                  <figcaption>
-                    <strong>02. 아이 프로필 등록</strong>
-                    <span>체크리스트 결과를 아이 기준으로 관리하기 위해 기본 정보를 등록하는 흐름입니다.</span>
-                  </figcaption>
-                </figure>
-
-                <figure class="project-media-card">
-                  <a href="./assets/littlesteps/littlesteps-checklist-start.png" target="_blank" rel="noreferrer">
-                    <img
-                      src="./assets/littlesteps/littlesteps-checklist-start.png"
-                      alt="LittleSteps 체크리스트 시작 화면"
-                      loading="lazy"
-                    />
-                  </a>
-                  <figcaption>
-                    <strong>03. AAC 체크리스트 진행</strong>
-                    <span>보호자가 문항에 답변하며 아이의 의사소통 반응을 단계적으로 기록합니다.</span>
-                  </figcaption>
-                </figure>
-
-                <figure class="project-media-card">
-                  <a href="./assets/littlesteps/littlesteps-checklist-result.png" target="_blank" rel="noreferrer">
-                    <img
-                      src="./assets/littlesteps/littlesteps-checklist-result.png"
-                      alt="LittleSteps 체크리스트 결과 화면"
-                      loading="lazy"
-                    />
-                  </a>
-                  <figcaption>
-                    <strong>04. 결과 확인</strong>
-                    <span>응답 데이터를 기반으로 결과를 보여주고, 사용자가 다음 행동을 판단할 수 있게 정리합니다.</span>
-                  </figcaption>
-                </figure>
-
-                <figure class="project-media-card">
-                  <a href="./assets/littlesteps/littlesteps-center-search.png" target="_blank" rel="noreferrer">
-                    <img
-                      src="./assets/littlesteps/littlesteps-center-search.png"
-                      alt="LittleSteps 센터 찾기 화면"
-                      loading="lazy"
-                    />
-                  </a>
-                  <figcaption>
-                    <strong>05. 센터 찾기</strong>
-                    <span>사용자가 관련 기관을 탐색하고 관심 센터를 확인할 수 있는 기능 흐름입니다.</span>
-                  </figcaption>
-                </figure>
-
-                <figure class="project-media-card">
-                  <a href="./assets/littlesteps/littlesteps-board.png" target="_blank" rel="noreferrer">
-                    <img
-                      src="./assets/littlesteps/littlesteps-board.png"
-                      alt="LittleSteps 자유게시판 화면"
-                      loading="lazy"
-                    />
-                  </a>
-                  <figcaption>
-                    <strong>06. 보호자 커뮤니티</strong>
-                    <span>정보 공유와 질문을 위한 게시판 화면으로, 서비스 사용 이후의 연결 흐름을 보완합니다.</span>
-                  </figcaption>
-                </figure>
-              </div>
-            </div>
-
-            <div class="project-meta-grid reveal">
-              <article>
-                <strong>Type</strong>
-                <span>개인 프로젝트</span>
-              </article>
-              <article>
-                <strong>Role</strong>
-                <span>기획 정리부터 구현까지 직접 진행</span>
-              </article>
-              <article>
-                <strong>Focus</strong>
-                <span>화면 흐름, API 연동, 상태 관리</span>
-              </article>
-              <article>
-                <strong>Goal</strong>
-                <span>기능 흐름을 직접 설계하고 검증</span>
-              </article>
-            </div>
-
-            <div class="project-content-grid">
-              <article class="project-panel reveal">
-                <h3>직접 다룬 부분</h3>
-                <ul class="project-list">
-                  <li>
-                    <strong>사용자 흐름 정리</strong>
-                    <span>화면에서 어떤 입력이 발생하고 다음 단계로 어떻게 이어지는지 먼저 정리했습니다.</span>
-                  </li>
-                  <li>
-                    <strong>화면과 API 연결</strong>
-                    <span>사용자 동작에 따라 필요한 요청을 보내고, 응답 결과가 화면 상태에 반영되는지 확인했습니다.</span>
-                  </li>
-                  <li>
-                    <strong>상태와 오류 확인</strong>
-                    <span>정상 동작뿐 아니라 빈 값, 실패 응답, 로딩 상태처럼 사용자가 마주할 수 있는 상황을 함께 점검했습니다.</span>
-                  </li>
-                </ul>
-              </article>
-
-              <article class="project-panel reveal">
-                <h3>개인 프로젝트로 배운 점</h3>
-                <ul class="project-list">
-                  <li>
-                    <strong>결정의 이유 기록</strong>
-                    <span>혼자 진행할수록 왜 이 구조로 구현했는지 기록하지 않으면 이후 수정이 어려워진다는 점을 배웠습니다.</span>
-                  </li>
-                  <li>
-                    <strong>작은 단위 검증</strong>
-                    <span>큰 기능을 한 번에 완성하기보다 화면, 요청, 응답, 저장 흐름을 나누어 확인했습니다.</span>
-                  </li>
-                  <li>
-                    <strong>전체 흐름 이해</strong>
-                    <span>기능이 동작하는지만 보는 데서 끝나지 않고, 데이터가 어디서 만들어지고 어디에서 사용되는지 따라가려 했습니다.</span>
-                  </li>
-                </ul>
-              </article>
-            </div>
-
-            <div class="project-flow reveal" aria-label="LittleSteps 진행 흐름">
-              <div>
-                <span>01</span>
-                <strong>흐름 정리</strong>
-                <p>사용자 동작과 필요한 화면 전환을 먼저 정리했습니다.</p>
-              </div>
-              <div>
-                <span>02</span>
-                <strong>화면 구현</strong>
-                <p>컴포넌트와 상태를 나누어 화면을 구성했습니다.</p>
-              </div>
-              <div>
-                <span>03</span>
-                <strong>API 연결</strong>
-                <p>요청과 응답이 화면 상태에 반영되는지 확인했습니다.</p>
-              </div>
-              <div>
-                <span>04</span>
-                <strong>검증 개선</strong>
-                <p>오류 상황과 사용 흐름을 다시 점검했습니다.</p>
-              </div>
-            </div>
-
-            <div class="project-takeaway reveal">
-              <h3>프로젝트를 통해 배운 점</h3>
-              <p>
-                개인 프로젝트는 정해진 답을 따라가는 작업보다 스스로 기준을 세우는 과정에 가까웠습니다.
-                화면을 먼저 만들더라도 API와 데이터 흐름을 함께 생각해야 수정이 쉬웠고,
-                작은 단위로 검증하며 기록하는 습관이 프로젝트를 끝까지 이어가는 데 중요했습니다.
-              </p>
-            </div>
+        <section class="section-card reveal" id="projects">
+          <div class="section-heading">
+            <span>03</span>
+            <h2>Projects</h2>
           </div>
 
-          <div class="project-brief-block" id="orda-brief">
-            <div class="project-hero project-orda reveal">
-            <div>
-              <span class="project-label">ORDA Team Project</span>
-              <h3>실시간 산행 기록과 정상 인증을 제공하는 등산 서비스</h3>
+          <article class="project-card featured">
+            <div class="project-copy">
+              <span class="project-type">Team Project</span>
+              <h3>ORDA</h3>
               <p>
-                ORDA는 등산자가 산행을 시작하면 GPS 트랙을 기록하고, 정상 인증과
-                세션 상세, 난이도 지도, 2D 리플레이를 통해 산행 기록을 다시 확인할 수 있는
-                위치 기반 등산 서비스입니다.
+                등산자가 실시간 GPS로 산행을 기록하고, 등산로 난이도 지도와 정상 인증,
+                세션 상세, 2D 리플레이를 통해 산행 기록을 다시 확인할 수 있는 위치 기반
+                등산 서비스입니다.
               </p>
+              <dl class="project-meta">
+                <div>
+                  <dt>역할</dt>
+                  <dd>백엔드 중심 풀스택 개발 참여</dd>
+                </div>
+                <div>
+                  <dt>기술</dt>
+                  <dd>Spring Boot, JPA, PostgreSQL, PostGIS, React</dd>
+                </div>
+                <div>
+                  <dt>중점</dt>
+                  <dd>API 처리 흐름, 위치 데이터, 인증과 세션 데이터 이해</dd>
+                </div>
+              </dl>
             </div>
-
-            <div class="project-stack-card" aria-label="프로젝트 기술 스택">
-              <span>React</span>
-              <span>TypeScript</span>
-              <span>Java 17</span>
-              <span>Spring Boot</span>
-              <span>Spring Security</span>
-              <span>JWT</span>
-              <span>PostgreSQL</span>
-              <span>PostGIS</span>
-            </div>
-          </div>
-
-          <div class="project-media-showcase reveal" aria-label="ORDA 실제 구현 화면">
-            <div class="project-media-intro">
-              <span class="project-label">Visual Evidence</span>
-              <h3>실제 화면으로 보는 ORDA 기능 흐름</h3>
-              <p>
-                아래 화면은 등산자가 ORDA를 사용하는 주요 흐름을 보여줍니다.
-                실시간 GPS 기록으로 산행을 남기고, 등산로 난이도 지도와 정상 인증,
-                세션 상세 조회,
-                2D 리플레이를 통해 완료된 산행을 다시 확인하는 구조입니다.
-              </p>
-            </div>
-
-            <div class="project-media-grid">
-              <figure class="project-media-card">
+            <div class="media-strip" aria-label="ORDA 구현 화면">
+              <figure>
                 <a href="./assets/orda/orda-gps.png" target="_blank" rel="noreferrer">
-                  <img
-                    src="./assets/orda/orda-gps.png"
-                    alt="ORDA 실시간 GPS 기록 화면"
-                    loading="lazy"
-                  />
+                  <img src="./assets/orda/orda-gps.png" alt="ORDA GPS 기록 화면" loading="lazy" />
                 </a>
-                <figcaption>
-                  <strong>실시간 GPS 기록</strong>
-                  <span>사용자의 위치 기록이 화면과 서버 데이터 흐름으로 이어지는 구간입니다.</span>
-                </figcaption>
+                <figcaption>실시간 GPS 기록</figcaption>
               </figure>
-
-              <figure class="project-media-card">
+              <figure>
                 <a href="./assets/orda/orda-difficulty-map.png" target="_blank" rel="noreferrer">
                   <img
                     src="./assets/orda/orda-difficulty-map.png"
-                    alt="ORDA 등산로 난이도 지도 화면"
+                    alt="ORDA 등산로 난이도 지도"
                     loading="lazy"
                   />
                 </a>
-                <figcaption>
-                  <strong>등산로 난이도 지도</strong>
-                  <span>지도 위에 등산로 난이도를 색상별로 표시해 주변 경로를 확인할 수 있는 화면입니다.</span>
-                </figcaption>
+                <figcaption>등산로 난이도 지도</figcaption>
               </figure>
-
-              <figure class="project-media-card">
+              <figure>
                 <a href="./assets/orda/orda-summit-verification.gif" target="_blank" rel="noreferrer">
                   <img
                     src="./assets/orda/orda-summit-verification.gif"
-                    alt="ORDA 정상 인증 화면 시연"
+                    alt="ORDA 정상 인증 화면"
                     loading="lazy"
                   />
                 </a>
-                <figcaption>
-                  <strong>정상 인증 흐름</strong>
-                  <span>사진 인증 결과가 등산 세션 상태와 연결되는 과정을 확인할 수 있습니다.</span>
-                </figcaption>
+                <figcaption>정상 인증</figcaption>
               </figure>
-
-              <figure class="project-media-card">
+              <figure>
                 <a href="./assets/orda/orda-session-detail.gif" target="_blank" rel="noreferrer">
                   <img
                     src="./assets/orda/orda-session-detail.gif"
-                    alt="ORDA 등산 세션 상세 화면 시연"
+                    alt="ORDA 세션 상세 화면"
                     loading="lazy"
                   />
                 </a>
-                <figcaption>
-                  <strong>등산 세션 상세</strong>
-                  <span>저장된 등산 기록, 통계, 트랙 정보가 상세 화면으로 조회되는 흐름입니다.</span>
-                </figcaption>
+                <figcaption>세션 상세 조회</figcaption>
               </figure>
-
-              <figure class="project-media-card">
+              <figure>
                 <a href="./assets/orda/orda-replay.gif" target="_blank" rel="noreferrer">
+                  <img src="./assets/orda/orda-replay.gif" alt="ORDA 2D 리플레이" loading="lazy" />
+                </a>
+                <figcaption>2D 리플레이</figcaption>
+              </figure>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-copy">
+              <span class="project-type">Personal Project</span>
+              <h3>LittleSteps</h3>
+              <p>
+                경계선 지능장애나 ADHD 관련 어려움을 겪고 있거나 관련 징후가 보이는 아이의
+                보호자를 위한 서비스입니다. 아이 정보 등록, 체크리스트 결과 확인, 센터 탐색,
+                보호자 커뮤니티 흐름을 한 서비스 안에서 연결했습니다.
+              </p>
+              <dl class="project-meta">
+                <div>
+                  <dt>역할</dt>
+                  <dd>기획 정리, 화면 구현, API 연동, 데이터 흐름 확인</dd>
+                </div>
+                <div>
+                  <dt>기술</dt>
+                  <dd>React, TypeScript, Spring Boot, PostgreSQL</dd>
+                </div>
+                <div>
+                  <dt>중점</dt>
+                  <dd>체크리스트 흐름, 센터 탐색, 화면 상태와 서버 응답 연결</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="media-strip" aria-label="LittleSteps 구현 화면">
+              <figure>
+                <a href="./assets/littlesteps/littlesteps-main.png" target="_blank" rel="noreferrer">
                   <img
-                    src="./assets/orda/orda-replay.gif"
-                    alt="ORDA 2D 리플레이 화면 시연"
+                    src="./assets/littlesteps/littlesteps-main.png"
+                    alt="LittleSteps 메인 화면"
                     loading="lazy"
                   />
                 </a>
-                <figcaption>
-                  <strong>2D 리플레이</strong>
-                  <span>저장된 트랙 포인트를 다시 화면에 재생해 이동 흐름을 보여주는 기능입니다.</span>
-                </figcaption>
+                <figcaption>메인 화면</figcaption>
+              </figure>
+              <figure>
+                <a
+                  href="./assets/littlesteps/littlesteps-child-profile.png"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img
+                    src="./assets/littlesteps/littlesteps-child-profile.png"
+                    alt="LittleSteps 아이 정보 등록 화면"
+                    loading="lazy"
+                  />
+                </a>
+                <figcaption>아이 정보 등록</figcaption>
+              </figure>
+              <figure>
+                <a
+                  href="./assets/littlesteps/littlesteps-checklist-result.png"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img
+                    src="./assets/littlesteps/littlesteps-checklist-result.png"
+                    alt="LittleSteps 체크리스트 결과 화면"
+                    loading="lazy"
+                  />
+                </a>
+                <figcaption>체크리스트 결과</figcaption>
+              </figure>
+              <figure>
+                <a
+                  href="./assets/littlesteps/littlesteps-center-search.png"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img
+                    src="./assets/littlesteps/littlesteps-center-search.png"
+                    alt="LittleSteps 센터 탐색 화면"
+                    loading="lazy"
+                  />
+                </a>
+                <figcaption>센터 탐색</figcaption>
               </figure>
             </div>
+          </article>
+        </section>
+
+        <section class="section-card reveal" id="growth">
+          <div class="section-heading">
+            <span>04</span>
+            <h2>Growth</h2>
           </div>
-
-          <div class="project-meta-grid reveal">
+          <div class="timeline">
             <article>
-              <strong>Role</strong>
-              <span>백엔드 중심 풀스택 개발 참여</span>
-            </article>
-            <article>
-              <strong>Team</strong>
-              <span>교육 과정 팀 프로젝트</span>
-            </article>
-            <article>
-              <strong>Domain</strong>
-              <span>위치 기반 웹 서비스</span>
-            </article>
-            <article>
-              <strong>Focus</strong>
-              <span>API, 인증, 데이터 흐름 이해</span>
-            </article>
-          </div>
-
-          <div class="project-content-grid">
-            <article class="project-panel reveal">
-              <h3>담당하며 집중한 부분</h3>
-              <ul class="project-list">
-                <li>
-                  <strong>API 처리 흐름</strong>
-                  <span>controller, service, repository 구조를 기준으로 요청값과 응답 데이터를 확인했습니다.</span>
-                </li>
-                <li>
-                  <strong>인증과 요청 상태</strong>
-                  <span>Spring Security와 JWT가 화면 요청 흐름에 어떤 영향을 주는지 프로젝트에서 경험했습니다.</span>
-                </li>
-                <li>
-                  <strong>데이터 조회와 위치 정보</strong>
-                  <span>PostgreSQL과 PostGIS를 사용하며 위치 기반 데이터가 서비스 기능과 연결되는 과정을 접했습니다.</span>
-                </li>
-              </ul>
-            </article>
-
-            <article class="project-panel reveal">
-              <h3>문제 해결 방식</h3>
-              <ul class="project-list">
-                <li>
-                  <strong>요청부터 응답까지 추적</strong>
-                  <span>화면에서 문제가 보이면 API 요청, 서버 처리, DB 조회 순서로 원인을 좁혔습니다.</span>
-                </li>
-                <li>
-                  <strong>PR 리뷰 반영</strong>
-                  <span>팀원의 리뷰를 통해 자기 기능만 보는 습관에서 벗어나 전체 기능 연결을 확인했습니다.</span>
-                </li>
-                <li>
-                  <strong>설명 가능한 코드</strong>
-                  <span>AI나 검색으로 답을 얻더라도 코드가 왜 필요한지 다시 확인하고 기록하려고 했습니다.</span>
-                </li>
-              </ul>
-            </article>
-          </div>
-
-          <div class="project-flow reveal" aria-label="프로젝트 진행 흐름">
-            <div>
               <span>01</span>
-              <strong>요구 확인</strong>
-              <p>기능 목적과 화면 흐름을 먼저 정리했습니다.</p>
-            </div>
-            <div>
+              <h3>새로운 환경에서 기준을 넓혔습니다</h3>
+              <p>
+                익숙한 지역과 환경을 벗어나 더 큰 환경에서 운동하며, 피드백을 받아들이고
+                반복 적용하는 경험을 했습니다.
+              </p>
+            </article>
+            <article>
               <span>02</span>
-              <strong>API 구현</strong>
-              <p>요청값, 처리 조건, 응답 형태를 맞췄습니다.</p>
-            </div>
-            <div>
+              <h3>해병대 복무를 통해 끝까지 해내는 태도를 배웠습니다</h3>
+              <p>
+                물에 대한 두려움을 준비와 반복으로 마주했고, 낯선 환경에서도 정해진 규칙 안에서
+                책임 있게 움직이는 태도를 익혔습니다.
+              </p>
+            </article>
+            <article>
               <span>03</span>
-              <strong>화면 연결</strong>
-              <p>서버 응답이 사용자 화면에 반영되는지 확인했습니다.</p>
-            </div>
-            <div>
-              <span>04</span>
-              <strong>리뷰 개선</strong>
-              <p>PR 피드백을 반영하며 기준을 맞췄습니다.</p>
-            </div>
+              <h3>개발에서도 같은 태도를 이어가고 있습니다</h3>
+              <p>
+                처음 접하는 오류를 피하기보다 작은 단위로 나누어 확인하고, 기능이 연결되는 흐름을
+                설명할 수 있도록 기록하려 합니다.
+              </p>
+            </article>
           </div>
+        </section>
 
-          <div class="project-takeaway reveal">
-            <h3>프로젝트를 통해 배운 점</h3>
+        <section class="section-card contact-card reveal" id="contact">
+          <div>
+            <span class="section-kicker">Contact</span>
+            <h2>함께 일할 준비가 되어 있습니다.</h2>
             <p>
-              팀 프로젝트를 하며 기능 하나를 완성하는 것보다 중요한 것은 전체 흐름을 이해하는
-              일이라는 점을 배웠습니다. 화면, API, 데이터가 연결된 상태를 설명할 수 있어야
-              오류가 발생했을 때 원인을 빠르게 좁힐 수 있었고, PR 리뷰는 그 기준을 맞추는
-              과정이라는 것을 경험했습니다.
+              프로젝트 경험은 아직 많지 않지만, 팀의 방식에 맞춰 배우고 맡은 내용을 끝까지 확인하는
+              태도로 성장하겠습니다.
             </p>
           </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="contact section" id="contact">
-        <h2 class="section-title reveal" data-heading="Get in Touch">Contact</h2>
-
-        <div class="contact-container container grid">
-          <div class="contact-copy reveal">
-            <h3>작업 기준을 이해하고 설명할 수 있는 개발자로 성장하고 싶습니다.</h3>
-            <p>
-              지금은 신입으로서 배워야 할 부분이 많습니다. 다만 모르는 것을 숨기기보다
-              확인하고, 이해한 내용을 다시 설명하며 팀의 기준에 맞춰가려 합니다.
-            </p>
-          </div>
-
-          <div class="contact-info reveal">
-            <a class="contact-card" href="mailto:yxh750501@gmail.com">
-              <i class="uil uil-envelope-edit contact-card-icon"></i>
-              <h3 class="contact-card-title">Email</h3>
-              <span class="contact-card-data">yxh750501@gmail.com</span>
-              <span class="contact-button">메일 보내기 <i class="uil uil-arrow-right"></i></span>
-            </a>
-
-            <a class="contact-card" href="tel:01051237429">
-              <i class="uil uil-phone contact-card-icon"></i>
-              <h3 class="contact-card-title">Phone</h3>
-              <span class="contact-card-data">010-5123-7429</span>
-              <span class="contact-button">전화 연결 <i class="uil uil-arrow-right"></i></span>
-            </a>
-
+          <div class="contact-actions">
+            <a class="button primary" href="mailto:yxh750501@gmail.com">이메일 보내기</a>
             <a
-              class="contact-card"
+              class="button ghost"
               href="https://github.com/yxh750501-sys"
               target="_blank"
               rel="noreferrer"
             >
-              <i class="uil uil-github contact-card-icon"></i>
-              <h3 class="contact-card-title">GitHub</h3>
-              <span class="contact-card-data">yxh750501-sys</span>
-              <span class="contact-button">GitHub 보기 <i class="uil uil-arrow-right"></i></span>
+              GitHub 보기
             </a>
-
-            <button class="contact-card copy-card" id="copyEmail" type="button">
-              <i class="uil uil-copy contact-card-icon"></i>
-              <h3 class="contact-card-title">Copy Email</h3>
-              <span class="contact-card-data">클릭하면 이메일을 복사합니다</span>
-              <span class="contact-button">복사하기 <i class="uil uil-arrow-right"></i></span>
-            </button>
           </div>
-        </div>
-      </section>
-
-      <footer class="footer">
-        <div class="footer-bg">
-          <div class="footer-container container grid">
-            <div>
-              <h1 class="footer-title">윤종민</h1>
-              <span class="footer-subtitle">Full-stack Developer Portfolio</span>
-            </div>
-
-            <ul class="footer-links">
-              <li><a href="#about">About</a></li>
-              <li><a href="#skills">Skills</a></li>
-              <li><a href="#work">Work</a></li>
-              <li><a href="#project">Project</a></li>
-            </ul>
-
-            <div class="footer-socials">
-              <a
-                href="https://github.com/yxh750501-sys"
-                target="_blank"
-                rel="noreferrer"
-                class="footer-social"
-                aria-label="GitHub"
-              >
-                <i class="uil uil-github"></i>
-              </a>
-              <a href="mailto:yxh750501@gmail.com" class="footer-social" aria-label="Email">
-                <i class="uil uil-envelope"></i>
-              </a>
-            </div>
-          </div>
-
-          <p class="footer-copy">© 2026 Jongmin Yoon. Portfolio for developer position.</p>
-        </div>
-      </footer>
+        </section>
+      </div>
     </main>
 
-    <script src="./script.js"></script>
+    <script src="./script.js?v=profile-clean-1"></script>
   </body>
 </html>
